@@ -38,6 +38,10 @@
                 <enabled>true</enabled>
             </snapshots>
         </repository>
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
     </repositories>
 
     <pluginRepositories>
@@ -51,6 +55,10 @@
                 <enabled>true</enabled>
             </snapshots>
         </pluginRepository>
+    <pluginRepository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+    </pluginRepository>
     </pluginRepositories>
 
 
@@ -274,7 +282,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-enforcer-plugin</artifactId>
-                        <version>3.0.5</version>
+                        <version>1.0</version>
                         <executions>
                             <execution>
                                 <id>enforce-versions</id>
@@ -384,7 +392,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-enforcer-plugin</artifactId>
-                        <version>3.0.5</version>
+                        <version>1.0</version>
                         <executions>
                             <execution>
                                 <id>enforce-versions</id>
