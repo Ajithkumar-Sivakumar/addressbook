@@ -199,7 +199,11 @@
 					</excludes>
 				</configuration>
 			</plugin>
-
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.0.5</version>
+            </plugin>
         </plugins>
 		<finalName>addressbook</finalName>
     </build>
