@@ -6,21 +6,21 @@ pipeline {
    }
     stages {
         stage('Compile') { //prod
-        agent any
+        agent {label 'node_slave'}
             steps {
                 echo "Compile the code"
                 sh "mvn compile"
             }
         }
          stage('UnitTest') { //test
-         agent any
+         agent {label 'node_slave'}
             steps {
                 echo "Test the code"
                 sh "mvn test"
             }
         }
          stage('Package') {//dev
-        agent {label 'linux_slave'}
+        agent {label 'node_slave'}
             steps {
                 echo "Package the code"
                 sh "mvn package"
