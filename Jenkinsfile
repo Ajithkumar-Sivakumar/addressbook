@@ -2,7 +2,7 @@ pipeline {
    agent none
    tools{
 //     jdk "myjava"
-        maven "mymaven"
+        maven "Maven"
    }
     stages {
         stage('Compile') { //prod
