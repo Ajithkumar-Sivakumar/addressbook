@@ -1,29 +1,42 @@
 pipeline {
-   agent none
-   tools{
-//     jdk "myjava"
-        maven "Maven"
-   }
+    agent any
+
+    parameters {
+        string(name: 'ENVIRONMENT', defaultValue: 'dev', description: 'Environment to deploy to')
+        booleanParam(name: 'RUN_TESTS', defaultValue: true, description: 'Run tests?')
+        choice(name: 'DEPLOY_SERVER', choices: ['dev', 'test', 'prod'], description: 'Choose deployment server')
+    }
+
     stages {
-        stage('Compile') { //prod
-        agent {label 'node_slave'}
+        stage('Dev Stage') {
             steps {
-                echo "Compile the code"
-                sh "mvn compile"
+                script {
+                    if (params.ENVIRONMENT == 'dev') {
+                        echo "Building for development environment"
+                    }
+                }
             }
         }
-         stage('UnitTest') { //test
-         agent {label 'node_slave'}
+        stage('Test Stage') {
             steps {
-                echo "Test the code"
-                sh "mvn test"
+                script {
+                    if (params.RUN_TESTS) {
+                        echo "Running tests in the ${params.ENVIRONMENT} environment"
+                    } else {
+                        echo "Skipping tests"
+                    }
+                }
             }
         }
-         stage('Package') {//dev
-        agent {label 'node_slave'}
+        stage('Prod Stage') {
             steps {
-                echo "Package the code"
-                sh "mvn package"
+                script {
+                    if (params.DEPLOY_SERVER == 'prod') {
+                        echo "Deploying to production server"
+                    } else {
+                        echo "Deploying to ${params.DEPLOY_SERVER} server"
+                    }
+                }
             }
         }
     }
