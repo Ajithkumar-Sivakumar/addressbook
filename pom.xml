@@ -506,10 +506,13 @@
     </profiles>
     <distributionManagement>
     <repository>
-        <id>central</id>
-        <name>a0v7dio7hlikc-artifactory-primary-0-releases</name>
+        <id>addressbook-libs-release</id> <!-- Must match settings.xml <server> id -->
         <url>https://trial3lkrmb.jfrog.io/artifactory/addressbook-libs-release</url>
     </repository>
+    <snapshotRepository>
+        <id>addressbook-libs-snapshot</id>
+        <url>https://trial3lkrmb.jfrog.io/artifactory/addressbook-libs-snapshot</url>
+    </snapshotRepository>
 </distributionManagement>
 
 </project>
