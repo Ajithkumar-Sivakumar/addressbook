@@ -40,7 +40,8 @@
         </repository>
         <repository>
             <id>central</id>
-            <url>https://repo.maven.apache.org/maven2</url>
+            <name>a0v7dio7hlikc-artifactory-primary-0-releases</name>
+            <url>https://trial3lkrmb.jfrog.io/artifactory/addressbook-libs-release</url>
         </repository>
     </repositories>
 
