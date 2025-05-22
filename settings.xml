@@ -5,7 +5,7 @@
     <server>
       <username>${JFROG_USER}</username>
       <password>${JFROG_PASSWORD}</password>
-      <id>central</id>
+      <id>addressbook-libs-release</id>
     </server>
     <server>
       <username>${JFROG_USER}</username>
