@@ -5,12 +5,12 @@
     <server>
       <username>ajithkumar.s2307@gmail.com</username>
       <password>cmVmdGtuOjAxOjE3Nzk0NjczNTk6WGk4UG5aaGltWkpVUDZ2RDZOVzVocWpXRnZU</password>
-      <id>addressbook-libs-release</id>
+      <id>central</id>
     </server>
     <server>
       <username>ajithkumar.s2307@gmail.com</username>
       <password>cmVmdGtuOjAxOjE3Nzk0NjczNTk6WGk4UG5aaGltWkpVUDZ2RDZOVzVocWpXRnZU</password>
-      <id>addressbook-libs-snapshot</id>
+      <id>snapshot</id>
     </server>
   </servers>
   <profiles>
