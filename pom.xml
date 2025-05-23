@@ -505,7 +505,7 @@
     </profiles>
 <distributionManagement>
   <repository>
-    <id>addressbook-libs-release</id>
+    <id>central</id>
     <name>a0v7dio7hlikc-artifactory-primary-0-releases</name>
     <url>https://trial3lkrmb.jfrog.io/artifactory/addressbook-libs-release</url>
   </repository>
